@@ -21,11 +21,11 @@
 }
 
 .details .status {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .alive {
-  color: greenyellow;
+  color: rgb(111, 180, 7);
 }
 
 .dead {
