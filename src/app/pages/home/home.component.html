@@ -1,2 +1,12 @@
 <app-header></app-header>
-<p>home works!</p>
+<div class="characters-container">
+  <div class="character" *ngFor="let character of data">
+    <app-character
+      [src]="character.image"
+      [name]="character.name"
+      [status]="character.status"
+      [gender]="character.gender"
+      [location]="character.location.name"
+    ></app-character>
+  </div>
+</div>

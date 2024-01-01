@@ -1,0 +1,37 @@
+.character {
+  margin-bottom: 1.5rem;
+}
+.img img {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  width: 100%;
+}
+.title {
+  padding: .5rem 1rem;
+  border-left: 5px solid #6e6e6e;
+  margin-bottom: .5rem;
+}
+.details {
+
+  padding: 0rem .5rem;
+}
+
+.details span {
+  font-weight: 800;
+}
+
+.details .status {
+  font-size: 20px;
+}
+
+.alive {
+  color: greenyellow;
+}
+
+.dead {
+  color: red;
+}
+
+.unknown {
+  color: gray;
+}
