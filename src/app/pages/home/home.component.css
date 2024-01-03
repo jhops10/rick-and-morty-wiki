@@ -6,3 +6,24 @@
   gap: .5rem;
   margin: 1.5rem 0;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.buttons-container button {
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  transition-duration: 100ms;
+  font-weight: bold;
+}
+
+.buttons-container button:hover {
+  scale: 1.1;
+}

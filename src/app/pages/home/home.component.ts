@@ -9,14 +9,23 @@ import { CharacterService } from 'src/app/services/character.service';
 })
 export class HomeComponent implements OnInit {
   data: any;
-  characters!: Character[];
+  characters: Character[] = [];
 
   constructor(private characterService: CharacterService) {}
 
   ngOnInit(): void {
     this.characterService.getCharacters().subscribe((res) => {
       this.data = res.results;
-      console.log(this.data);
+      this.characters = this.characters.concat(this.data);
+      console.log(this.characters);
+    });
+  }
+
+  loadMore() {
+    this.characterService.loadMore().subscribe((res) => {
+      this.data = this.data.concat(res.results);
+      this.characters = this.characters.concat(this.data);
+      console.log(this.characters);
     });
   }
 }
