@@ -20,4 +20,8 @@ export class CharacterService {
     this.page += 1;
     return this.http.get<Character>(`${this.apiURL}/?page=${this.page}`);
   }
+
+  searchByName(query: string): Observable<Character> {
+    return this.http.get<Character>(`${this.apiURL}/?name=${query}`);
+  }
 }

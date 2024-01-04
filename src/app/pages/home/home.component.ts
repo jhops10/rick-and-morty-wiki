@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   data: any;
   characters: Character[] = [];
 
+  searchTerm: string = '';
+
   constructor(private characterService: CharacterService) {}
 
   ngOnInit(): void {
@@ -25,7 +27,12 @@ export class HomeComponent implements OnInit {
     this.characterService.loadMore().subscribe((res) => {
       this.data = this.data.concat(res.results);
       this.characters = this.characters.concat(this.data);
-      console.log(this.characters);
+    });
+  }
+
+  search() {
+    this.characterService.searchByName(this.searchTerm).subscribe((res) => {
+      this.data = res.results;
     });
   }
 }

@@ -8,11 +8,16 @@ import { HeaderComponent } from './shared/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterComponent } from './shared/character/character.component';
-import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent, CharacterComponent, SearchBarComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    HeaderComponent,
+    CharacterComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
