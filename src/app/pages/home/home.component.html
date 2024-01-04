@@ -7,11 +7,14 @@
     type="text"
     placeholder="Pesquisar por Personagem"
   />
-  <button (click)="search()">Search</button>
+  <button (click)="searchByName()">Search</button>
 </div>
 <!-- input de pesquisa -->
 <div class="characters-container">
-  <div class="character" *ngFor="let character of data">
+  <div
+    class="character"
+    *ngFor="let character of searchData.length > 0 ? searchData : data"
+  >
     <app-character
       [src]="character.image"
       [name]="character.name"
@@ -22,5 +25,10 @@
   </div>
 </div>
 <div class="buttons-container">
-  <button (click)="loadMore()">Load More</button>
+  <button (click)="loadMore()" *ngIf="searchData.length === 0">
+    Load More
+  </button>
+  <button (click)="resetSearch()" *ngIf="searchData.length > 0">
+    Reset Search
+  </button>
 </div>

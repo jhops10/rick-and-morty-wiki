@@ -4,7 +4,19 @@
   align-items: center;
   height: 60px;
   border-bottom: 1px solid #000;
+}
+a {
+  text-decoration: none;
+}
 
+.header .title {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.title:hover {
+  opacity: 1;
 }
 
 .header_nav {
