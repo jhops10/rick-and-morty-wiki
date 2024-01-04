@@ -1,3 +1,18 @@
+.banner {
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.form-text {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 1.5rem;
+  font-weight: bold;
+}
+
 .form {
   display: flex;
   justify-content: center;
@@ -14,8 +29,6 @@
   border: 1px solid #000;
   font-weight: bold;
   cursor: pointer;
-
-
 }
 
 .search-input {

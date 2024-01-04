@@ -1,13 +1,22 @@
 <app-header> </app-header>
+<!-- banner -->
+<div class="banner">
+  <img
+    src="https://tldrmoviereviewsblog.files.wordpress.com/2020/05/promortyus-banner.jpg"
+    alt=""
+  />
+</div>
+<!-- banner -->
 <!-- input de pesquisa -->
+<p class="form-text">Pesquisar Personagem</p>
 <div class="form">
   <input
     [(ngModel)]="searchTerm"
     class="search-input"
     type="text"
-    placeholder="Pesquisar por Personagem"
+    placeholder="Pesquisar..."
   />
-  <button (click)="searchByName()">Search</button>
+  <button (click)="searchByName()">Buscar</button>
 </div>
 <!-- input de pesquisa -->
 <div class="characters-container">
@@ -25,10 +34,8 @@
   </div>
 </div>
 <div class="buttons-container">
-  <button (click)="loadMore()" *ngIf="searchData.length === 0">
-    Load More
-  </button>
+  <button (click)="loadMore()" *ngIf="searchData.length === 0">Mais...</button>
   <button (click)="resetSearch()" *ngIf="searchData.length > 0">
-    Reset Search
+    Resetar Busca
   </button>
 </div>
