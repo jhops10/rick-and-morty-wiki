@@ -40,6 +40,10 @@
 
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .characters-container {
   display: flex;
   justify-content: center;

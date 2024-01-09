@@ -16,6 +16,10 @@ export class CharacterService {
     return this.http.get<Character>(this.apiURL);
   }
 
+  getCharacter(id: number): Observable<Character> {
+    return this.http.get<Character>(`${this.apiURL}/${id}`);
+  }
+
   loadMore(): Observable<Character> {
     this.page += 1;
     return this.http.get<Character>(`${this.apiURL}/?page=${this.page}`);

@@ -1,4 +1,3 @@
-<app-header> </app-header>
 <!-- banner -->
 <div class="banner">
   <img
@@ -25,6 +24,8 @@
     *ngFor="let character of searchData.length > 0 ? searchData : data"
   >
     <app-character
+      class="pointer"
+      routerLink="details/{{ character.id }}"
       [src]="character.image"
       [name]="character.name"
       [status]="character.status"

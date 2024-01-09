@@ -1,0 +1,41 @@
+.container {
+  margin: 2.5rem 2.2rem;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin: 2.5rem 0rem;
+}
+
+.details {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem;
+  gap: .2rem;
+}
+
+.right-side p {
+  font-size: 1.2rem;
+}
+
+.created {
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  background: #CAE770;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition-duration: 100ms;
+  font-weight: bold;
+}
